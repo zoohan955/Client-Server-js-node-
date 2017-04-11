@@ -9,5 +9,5 @@ var server = http.createServer().listen(9000);
 server.addListener('request', function(req,res){
     file.serve(req,res);
     console.log(`${req.method} ${req.url}`);
-    console.log("Server Started")
+    console.log("Server Started");
 });
