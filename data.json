@@ -1,0 +1,22 @@
+{
+    "Rtree":{
+        "name":"",
+        "img_path":"", //Path
+        "Menu":"", //Path
+        "script":"",
+        "categories":[],
+        "tags":[],
+        "content":""
+     },
+
+    "Gland":{
+        "name":"",
+        "img_path":"", //Path
+        "Menu":"", //Path
+        "script":"",
+        "categories":[],
+        "tags":[],
+        "content":""
+
+}
+}

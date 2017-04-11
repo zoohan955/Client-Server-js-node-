@@ -1,0 +1,68 @@
+<html>
+<head>
+    <meta charset="windows-1251" />
+    <script defer src="jQuery.js"></script>
+    <link href="css/style.css" rel="stylesheet">
+    <script src="d3/d3.js"></script>
+    <script defer src="form1.js"></script>
+    <script defer src="DrawingWindow.js"></script>
+    <script defer src="/js/ajax.js"></script>
+</head>
+<body>
+    <div class="game">
+        <div class="open_close" id="open_close_main_menu" style="right: 0px;">
+            <img src="icons\menu.svg" />
+        </div>
+        <div class="open_close" id="open_close_info_menu" style="left: 0px;">
+            <img src="icons\info.svg" />
+        </div>
+        <div class="window_resizing" style="right:0px; bottom:0px;">
+            <img src="icons\replace.svg" />
+        </div>
+        <div class="menu-layers" id="info_menu-layers" style="display:none;left:0px;">
+            <div class="blur" style="left: 0px;"></div>
+            <div class="element-std" style="padding-left:50px;direction:rtl;">
+                <img src="icons\right.svg" />
+            </div>
+            <div class="menu">
+                <p>
+                    Hi, this educational and interactive application from the home of entertaining science "Interesarium".
+                    In it you will find a lot of useful and interesting information about the exhibits of our institution.
+                </p>
+            </div>
+        </div>
+        <div class="menu-layers" id="main_menu-layers" style="display:none;right: 0px;">
+            <div class="blur" style="right: 0px;"></div>
+            <div class="element-std" style="padding-right:50px;direction:ltr;">
+                <img id="back" src="icons\left.svg" />
+            </div>
+            <div class="menu" id="mainMenu" style="display:block;">
+
+                <div class="element" id="RTreeMenuButton" data-title="Ïåðåõîä â ìåíþ RTree.">
+                    <div class="element-image">
+                        <a><img src="splash\RTreeMenu.png" /></a>
+                    </div>
+                    <div class="element-title">RTreeMenu</div>
+                </div>
+                <div class="element" id="GLandMenuButton" data-title="Ïåðåõîä â ìåíþ GLand.">
+                    <div class="element-image">
+                        <img src="splash\Gland.png" />
+                    </div>
+                    <div class="element-title">GLand</div>
+                </div>
+                <div class="element" id="TrashButton" data-title="Î÷èñòêà îáëàñòè ðèñîâàíèÿ.">
+                    <div class="element-image">
+                        <img src="splash\trash.png" />
+                    </div>
+                    <div class="element-title">Trash</div>
+                </div>
+            </div>
+           
+        </div>
+
+        <svg width="1000" height="500"></svg>
+    </div>
+    <button class="load">LOAD</button>
+    <p id="result"></p>
+</body>
+</html>
