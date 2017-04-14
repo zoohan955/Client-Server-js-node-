@@ -1,9 +1,8 @@
 var button = document.querySelector('.load');
 var menu = document.querySelector('.menu');
-button.addEventListener('click', function(){
-  
-
-
+var RTreeButton = document.querySelector('#RTreeMenuButton' , '.element');
+var GLandMenuButton = document.querySelector('#GlandMenuButton', '.element');
+RTreeButton.addEventListener('click', function(){
 //---------------------------------------------СОБЫТИЯ 
 /*
 fetch('module/menu/RTree/RTree.html')
@@ -20,11 +19,19 @@ fetch('module/menu/RTree/RTree.html')
 $.get('module/menu/RTree/RTree.html',function(data){
     $('#main_menu-layers').append(data);
 });
-$( "head" ).append( "<script defer src='module/library/RTree/RTree.js'></script>");
+//$( "head" ).append( "<script defer src='module/library/RTree/RTree.js'></script>");
 /*
 
 });*/
 });
+GLandMenuButton.addEventListener('click',function(){
+
+$.get('module/menu/GLand/GLand.html', function(data){
+$('#main_menu-layers').append(data);
+});
+});
+
+
 
 
 
