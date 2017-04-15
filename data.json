@@ -1,22 +1,22 @@
+
 {
-    "Rtree":{
-        "name":"",
+"Gland":{
+        "name":"Gland",
         "img_path":"", //Path
         "Menu":"", //Path
-        "script":"",
-        "categories":[],
-        "tags":[],
-        "content":""
-     },
-
-    "Gland":{
-        "name":"",
-        "img_path":"", //Path
-        "Menu":"", //Path
-        "script":"",
+        "script":"module/library/GLand/GLand.js",
         "categories":[],
         "tags":[],
         "content":""
 
-}
+},
+ "Rtree":{
+        "name":"Rtree Gen",
+        "img_path":"", //Path
+        "Menu":"", //Path
+        "script":"module/library/RTree/RTree.js",
+        "categories":[],
+        "tags":[],
+        "content":""
+   }
 }
