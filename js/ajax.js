@@ -37,10 +37,13 @@ fetch('module/menu/RTree/RTree.html')
 //$.get('module/menu/RTree/RTree.html')
 
     });*/
+    
     $.get('module/menu/RTree/RTree.html',function(data){
     document.getElementsByTagName('head')[0].appendChild(script2);
     $('#main_menu-layers').append(data);
 });
+
+
 });
 
 
@@ -54,7 +57,7 @@ $('#main_menu-layers').append(data);
 
 //----------------------------------------------/СОБЫТИЯ
 // <div class="element" id="RTreeMenuButton" data-title="Ïåðåõîä â ìåíþ RTree.">
-/*
+
 button.addEventListener('click', (e)=>{
 e.preventDefault();
 
@@ -66,5 +69,5 @@ fetch('data.json')
         console.log(response);
     });
 
-)};
-*/
+
+});
