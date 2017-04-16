@@ -2,8 +2,8 @@
 {
 "Gland":{
         "name":"Gland",
-        "img_path":"", //Path
-        "Menu":"", //Path
+        "img_path":"", 
+        "Menu":"", 
         "script":"module/library/GLand/GLand.js",
         "categories":[],
         "tags":[],
@@ -12,8 +12,8 @@
 },
  "Rtree":{
         "name":"Rtree Gen",
-        "img_path":"", //Path
-        "Menu":"", //Path
+        "img_path":"", 
+        "Menu":"", 
         "script":"module/library/RTree/RTree.js",
         "categories":[],
         "tags":[],
