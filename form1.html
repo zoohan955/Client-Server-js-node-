@@ -7,6 +7,7 @@
     <script defer src="form1.js"></script>
     <script defer src="DrawingWindow.js"></script>
     <script defer src="/js/ajax.js"></script>
+    <script defer src="module/library/StartMenu/StartMenu.js"></script>
 </head>
 <body>
     <div class="game">
@@ -25,7 +26,7 @@
                 <img src="icons\right.svg" />
             </div>
             <div class="menu">
-                <p>
+                <p class="white">
                     Hi, this educational and interactive application from the home of entertaining science "Interesarium".
                     In it you will find a lot of useful and interesting information about the exhibits of our institution.
                 </p>
@@ -35,12 +36,14 @@
             <div class="blur" style="right: 0px;"></div>
             <div class="element-std" style="padding-right:50px;direction:ltr;">
                 <img id="back" src="icons\left.svg" />
+                <img id="search" src="icons\search.svg" />
+                <input id="input-search" type="search" placeholder="Помочь что-то найти?" style="display:none; position:absolute; top:15px;" />
             </div>
             <div class="menu" id="mainMenu" style="display:block;">
 
                 <div class="element" id="RTreeMenuButton" data-title="ГЏГҐГ°ГҐГµГ®Г¤ Гў Г¬ГҐГ­Гѕ RTree.">
                     <div class="element-image">
-                        <a><img src="splash\RTreeMenu.png" /></a>
+                        <img src="splash\RTreeMenu.png" />
                     </div>
                     <div class="element-title">RTreeMenu</div>
                 </div>
@@ -57,10 +60,9 @@
                     <div class="element-title">Trash</div>
                 </div>
             </div>
-           
-        </div>
 
-        <svg width="1000" height="500"></svg>
+        </div>
+        <svg width="900" height="400"></svg>
     </div>
     <button class="load">LOAD JSON</button>
     <p id="result"></p>
