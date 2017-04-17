@@ -1,5 +1,4 @@
 body {
-   
 }
 
 #transparentBG {
@@ -10,9 +9,16 @@ body {
     stroke: black;
 }
 
-#info_menu-layers {
+
+.white {
     color: white;
 }
+
+.title-text {
+    text-align: center;
+    font-size: 1.5em;
+}
+
 
 .game {
     display: inline-block;
@@ -25,7 +31,7 @@ body {
     position: absolute;
     width: 300px;
     height: 100%;
-    font-size: 1.2em;
+    font-size: 1.4em;
     border-left: 1px solid rgba(255,255,255,0.4);
     border-right: 1px solid rgba(255,255,255,0.4);
 }
@@ -48,14 +54,35 @@ body {
     display: block;
     margin-top: 15px;
     margin-bottom: 15px;
-    padding: 5px 0 5px 0;
-    width: 200px;
+    padding-top: 10px;
+    padding-bottom: 1px;
+    width: 250px;
     text-align: center;
     background-color: rgba(255,255,255,0.6);
-    border-radius: 25px;
+    border-radius: 15px;
     margin-left: auto;
     margin-right: auto;
 }
+
+    .element p {
+        margin-bottom: 10px;
+    }
+
+    .element .element-image {
+        margin-bottom: 10px;
+    }
+
+    .element .element-title {
+        margin-bottom: 10px;
+    }
+
+    .element .button {
+        margin-bottom: 10px;
+    }
+
+    .element input {
+        margin-bottom: 10px;
+    }
 
     .element:hover:after {
         display: none;
@@ -90,13 +117,29 @@ body {
 .element-std {
     z-index: 13;
     max-width: 250px;
+    max-height: 50px;
     background-color: rgba(255,255,255,0.6);
 }
-
 
     .element-std img {
         background-size: cover;
         width: 50px;
+    }
+
+.button {
+    z-index: 13;
+    display: block;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    background-color: rgba(255,255,255,0.6);
+    border-radius: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    .button img {
+        height: 100%;
     }
 
 svg {
@@ -106,8 +149,6 @@ svg {
     background-size: cover;
     background-attachment: fixed;
 }
-
-
 
 .open_close {
     position: absolute;
