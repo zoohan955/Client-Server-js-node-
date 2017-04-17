@@ -40,12 +40,17 @@ d3.select("#open_close_main_menu").on("click", () => {
     CloseMenu("#main_menu-layers", "#open_close_main_menu", "icons/menu.svg", "icons/close.svg");
 });
 d3.select("#open_close_info_menu").on("click", () => {
-    CloseMenu("#info_menu-layers", "#open_close_info_menu", "icons/info.svg", "icons/info.svg");
+    CloseMenu("#info_menu-layers", "#open_close_info_menu", "icons/info.svg", "icons/close.svg");
 });
 d3.select("#back").on("click", () => {
     BackMenu();
 })
-//************Главное меню**************
+//***********mainMenu-layear***************
+d3.select("#main_menu-layers").select("#search").on("click", () => {
+    showHideElementStd(d3.select("#main_menu-layers").select("#back"));
+    showHideElementStd(d3.select("#main_menu-layers").select("#input-search"));
+})
+//************Меню MainMenu****************
 mainMenu.select("#RTreeMenuButton").on("click", () => {
     ChangeMenu(RTreeMenu);
 });
@@ -59,6 +64,7 @@ mainMenu.select("#TrashButton").on("click", () => {
 
 //**********Меню Create RTree***********
 
+//************Меню StartMenu************
 
 //**************************Функции**********************************
 ChangeMenu = (menu) => {
@@ -68,7 +74,6 @@ ChangeMenu = (menu) => {
 BackMenu = () => {
     if (prevMenu.length > 1) {
         prevMenu.pop();
-
         replaceMenu(prevMenu[prevMenu.length - 1]);
     }
 };
@@ -83,14 +88,24 @@ CloseMenu = (id_menu, id_open_close_button, path_img1, path_img2) => {
         d3.select(id_open_close_button).select("img").attr("src", path_img2);
     }
 };
-
-
-//***********************Прочие функции******************************
 replaceMenu = (newcurrent) => {
     currentMenu.style("display", "none");
     currentMenu = newcurrent;
     currentMenu.style("display", "block");
 }
+replaceElement = (currentElement, newElement) => {
+    currentElement.style("display", "none");
+    newElement.style("display", "block");
+}
+showHideElementStd = (elementStd) => {
+    if (elementStd.style("display") == "none")
+        elementStd.style("display", "inline");
+    else
+        elementStd.style("display", "none");
+}
+
+//***********************Прочие функции******************************
+
 /*
 function steper() {
     var qn = 0;
