@@ -1,8 +1,6 @@
 var inSearch = document.querySelector('.SearchInput');
 var NameType = document.querySelector("#startMenu-nameButton",".button");
-var YearType = document.querySelector("#startMenu-yearButton");
-inType = document.querySelector(".name");
-ageType=document.querySelector(".year");
+
 
 var button = document.querySelector('.load');
 var RTreeButton = document.querySelector('#RTreeMenuButton' , '.element');
@@ -35,7 +33,7 @@ function  User  (name,age ){
 }
 
 
-user1 = new User('Vanya',16);
+user1 = new User();
 
 //console.log(user1.name+" "+ user1.dificulty);
 
