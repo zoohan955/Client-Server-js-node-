@@ -1,7 +1,16 @@
+var inSearch = document.querySelector('.SearchInput');
+var NameType = document.querySelector("#startMenu-nameButton",".button");
+var YearType = document.querySelector("#startMenu-yearButton");
+inType = document.querySelector(".name");
+ageType=document.querySelector(".year");
+
 var button = document.querySelector('.load');
-////var menu = document.querySelector('.menu');
 var RTreeButton = document.querySelector('#RTreeMenuButton' , '.element');
 var GLandMenuButton = document.querySelector('#GlandMenuButton', '.element');
+var startMenu = document.querySelector(".stMenubtn");
+
+
+
 
 
 //GLAND
@@ -17,6 +26,18 @@ script2.src = 'module/library/RTree/RTree.js';
 //
 
 
+//objets
+function  User  (name,age ){
+    this.name=name;
+    this.dificulty=()=>{ 
+        return (age<10)?1:((age<17)?2:3);
+    };
+}
+
+
+user1 = new User('Vanya',16);
+
+//console.log(user1.name+" "+ user1.dificulty);
 
 RTreeButton.addEventListener('click', function(){
 //---------------------------------------------СОБЫТИЯ 
@@ -56,7 +77,7 @@ $('#main_menu-layers').append(data);
 });
 
 //----------------------------------------------/СОБЫТИЯ
-// <div class="element" id="RTreeMenuButton" data-title="Ïåðåõîä â ìåíþ RTree.">
+
 
 button.addEventListener('click', (e)=>{
 e.preventDefault();
@@ -71,3 +92,13 @@ fetch('data.json')
 
 
 });
+
+
+
+/*
+
+for (var i = 0; i < Object.keys(JSON).length - 1; i++) {
+  if (JSON[i].match(eval('{' + ('/' + search_string + '/gi') + '}')) != null){
+    console.log(JSON);
+  }
+}*/
