@@ -66,6 +66,7 @@ mainMenu.select("#TrashButton").on("click", () => {
 
 //************Меню StartMenu************
 
+
 //**************************Функции**********************************
 ChangeMenu = (menu) => {
     replaceMenu(menu);
