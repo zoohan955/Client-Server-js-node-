@@ -1,8 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\css"
+    "\\css",
+    "\\module",
+    "\\module\\library",
+    "\\module\\library\\StartMenu"
   ],
-  "SelectedNode": "\\css\\style.css",
+  "SelectedNode": "\\module\\library\\StartMenu\\StartMenu.js",
   "PreviewInSolutionExplorer": false
 }
