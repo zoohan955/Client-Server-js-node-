@@ -42,7 +42,7 @@ d3.select("#open_close_main_menu").on("click", () => {
 d3.select("#open_close_info_menu").on("click", () => {
     CloseMenu("#info_menu-layers", "#open_close_info_menu", "icons/info.svg", "icons/close.svg");
 });
-d3.select("#back").on("click", () => {
+d3.select("#main_menu-layers").select("#back").on("click", () => {
     BackMenu();
 })
 //***********mainMenu-layear***************
