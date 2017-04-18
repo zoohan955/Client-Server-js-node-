@@ -7,7 +7,10 @@
     <script defer src="form1.js"></script>
     <script defer src="DrawingWindow.js"></script>
     <script defer src="/js/ajax.js"></script>
-    <script defer src="module/library/StartMenu/StartMenu.js"></script>
+   <script defer src="require.js"></script>
+   <script id = "startMenuJS" defer src = "module/library/StartMenu/StartMenu.js"></script>
+
+
 </head>
 <body>
     <div class="game">
@@ -20,6 +23,38 @@
         <div class="window_resizing" style="right:0px; bottom:0px;">
             <img src="icons\replace.svg" />
         </div>
+        <div id="layers"> 
+          <div class="menu-layers" id="start_menu-layers" style="display:flex;left: 50%; margin-left: -150px;">
+    <div class="blur" style="right: 0px;"></div>
+    <div class="element-std" style="padding-right:50px;direction:ltr;">
+        <img id="back" src="icons\empty.png" />
+    </div>
+    <div class="menu" id="startMenu" style="display:block;">
+        <p class="title-text white">MainMenu</p>
+        <div class="element" id="startMenu-name" style="display:block;">
+            <div class="element-title">
+              Whats is your name?
+            </div>
+            <input class="name">
+            <div class="button" id="startMenu-nameButton">
+                <img src="icons\right.svg" />
+            </div>
+        </div>
+        <div class="element" id="startMenu-year" style="display:none;">
+            <div class="element-title">
+                how old are you?
+            </div>
+            <input class="year">
+            <div class="button" id="startMenu-yearButton">
+                <img src="icons\accept.svg" />
+            </div>
+        </div>
+        <p style="text-align:center;">
+            <input type="radio" name="start_menu" id="startMenu-nameRadio" checked />
+            <input type="radio" name="start_menu" id="startMenu-yearRadio" />
+        </p>
+    </div>
+</div>  
         <div class="menu-layers" id="info_menu-layers" style="display:none;left:0px;">
             <div class="blur" style="left: 0px;"></div>
             <div class="element-std" style="padding-left:50px;direction:rtl;">
@@ -37,7 +72,7 @@
             <div class="element-std" style="padding-right:50px;direction:ltr;">
                 <img id="back" src="icons\left.svg" />
                 <img id="search" src="icons\search.svg" />
-                <input id="input-search" type="search" placeholder="Помочь что-то найти?" style="display:none; position:absolute; top:15px;" />
+                <input id="input-search" type="search" placeholder="пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ-пїЅпїЅ пїЅпїЅпїЅпїЅпїЅ?" style="display:none; position:absolute; top:15px;" />
             </div>
             <div class="menu" id="mainMenu" style="display:block;">
 
@@ -62,9 +97,13 @@
             </div>
 
         </div>
+        </div>
         <svg width="900" height="400"></svg>
     </div>
     <button class="load">LOAD JSON</button>
     <p id="result"></p>
+    <button class="stMenubtn">startMenu</button>
+    <input class = "SearchInput">
+      
 </body>
 </html>
