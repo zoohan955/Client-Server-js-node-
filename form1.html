@@ -9,6 +9,7 @@
     <script defer src="/js/ajax.js"></script>
     <script defer src="require.js"></script>
     <script id="startMenuJS" defer src="module/library/StartMenu/StartMenu.js"></script>
+    <script id="demoVideoMenuJS" defer src="module/library/DemoVideoMenu/DemoVideoMenu.js"></script>
 
 
 </head>
@@ -24,7 +25,7 @@
             <img src="icons\replace.svg" />
         </div>
         <div id="layers">
-            <div class="menu-layers" id="start_menu-layers" style="display:flex;left: 50%; margin-left: -150px;">
+            <div class="menu-layers" id="start_menu-layers" style="display:none;left: 50%; margin-left: -150px;">
                 <div class="blur" style="right: 0px;"></div>
                 <div class="element-std" style="padding-right:50px;direction:ltr;">
                     <img src="icons\empty.png" />
@@ -52,6 +53,32 @@
                     <p style="text-align:center;">
                         <input type="radio" name="start_menu" id="startMenu-nameRadio" checked />
                         <input type="radio" name="start_menu" id="startMenu-yearRadio" />
+                    </p>
+                </div>
+            </div>
+            <div class="menu-layers" id="demoVideo_menu-layers" style="display:flex;left: 50%; margin-left: -150px;">
+                <div class="blur" style="right: 0px;"></div>
+                <div class="element-std" style="padding-left:50px;direction:rtl;">
+                    <img id="close" src="icons\close.svg" />
+                </div>
+                <div class="menu" id="demoVideoMenu" style="display:block;">
+                    <div class="element" id="demoVideoMenu-1" style="display:block;width:100%; padding:0px;">
+                        <video src="video/bloodborne1.mp4" controls></video>
+                    </div>
+                    <div class="element" id="demoVideoMenu-2" style="display:none;width:100%; padding:0px;">
+                        <video src="video/pain.mp4" controls></video>
+                    </div>
+                    <div class="element" id="demoVideoMenu-3" style="display:none;width:100%; padding:0px;">
+                        <video src="video/oldspice.mp4" controls></video>
+                    </div>
+                    <div class="element" id="demoVideoMenu-4" style="display:none;width:100%; padding:0px;">
+                        <video src="video/tor3.mp4" controls></video>
+                    </div>
+                    <p style="text-align:center;">
+                        <input type="radio" name="demoVideo_menu" id="demoVideoMenu-1Radio" checked />
+                        <input type="radio" name="demoVideo_menu" id="demoVideoMenu-2Radio" />
+                        <input type="radio" name="demoVideo_menu" id="demoVideoMenu-3Radio" />
+                        <input type="radio" name="demoVideo_menu" id="demoVideoMenu-4Radio" />
                     </p>
                 </div>
             </div>

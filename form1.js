@@ -89,6 +89,10 @@ CloseMenu = (id_menu, id_open_close_button, path_img1, path_img2) => {
         d3.select(id_open_close_button).select("img").attr("src", path_img2);
     }
 };
+RemoveMenu = (id_menu, id_js) => {
+    id_menu.remove();
+    id_js.remove();
+};
 replaceMenu = (newcurrent) => {
     currentMenu.style("display", "none");
     currentMenu = newcurrent;
@@ -97,6 +101,7 @@ replaceMenu = (newcurrent) => {
 replaceElement = (currentElement, newElement) => {
     currentElement.style("display", "none");
     newElement.style("display", "block");
+    return newElement;
 }
 showHideElementStd = (elementStd) => {
     if (elementStd.style("display") == "none")

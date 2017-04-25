@@ -4,27 +4,30 @@
 //ageType=document.querySelector("#startMenu-yearInput");
 
 
-tmpName="";
+tmpName = "";
 
 startMenu = d3.select("#startMenu");
 
+var currentElement_startMenu = d3.select("#startMenu-name");
+
 startMenu.select("#startMenu-yearRadio").on("click", () => {
-    replaceElement(d3.select("#startMenu-name"), d3.select("#startMenu-year"));
+    var newElement = d3.select("#startMenu-year");
+    currentElement_startMenu = replaceElement(currentElement_startMenu, newElement);
 });
 startMenu.select("#startMenu-nameRadio").on("click", () => {
-    replaceElement(d3.select("#startMenu-year"), d3.select("#startMenu-name"));
+    var newElement = d3.select("#startMenu-name");
+    currentElement_startMenu = replaceElement(currentElement_startMenu, newElement);
 });
 startMenu.select("#startMenu-nameButton").on("click", function check() {
     document.getElementById("startMenu-yearRadio").checked = true;
-    replaceElement(d3.select("#startMenu-name"), d3.select("#startMenu-year"));
-    tmpName=document.querySelector("#startMenu-nameInput").value;
+    var newElement = d3.select("#startMenu-year");
+    currentElement_startMenu = replaceElement(currentElement_startMenu, newElement);
+    tmpName = document.querySelector("#startMenu-nameInput").value;
     //console.log(user1.name+" "+ user1.dificulty);
 });
 startMenu.select("#startMenu-yearButton").on("click", () => {
-    tmpAge=document.querySelector("#startMenu-yearInput").value;
-    user1 = new User(tmpName,tmpAge);
-$('#start_menu-layers').remove();
-document.getElementById('startMenuJS').parentNode.removeChild(document.getElementById('startMenuJS'));
-
+    tmpAge = document.querySelector("#startMenu-yearInput").value;
+    user1 = new User(tmpName, tmpAge);
+    RemoveMenu($('#start_menu-layers'), $('#startMenuJS'));
 });
 

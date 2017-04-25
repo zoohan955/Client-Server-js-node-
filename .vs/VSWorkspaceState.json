@@ -2,10 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\css",
+    "\\d3",
     "\\module",
     "\\module\\library",
+    "\\module\\library\\DemoVideoMenu",
     "\\module\\library\\StartMenu"
   ],
-  "SelectedNode": "\\module\\library\\StartMenu\\StartMenu.js",
+  "SelectedNode": "\\module\\library\\DemoVideoMenu\\DemoVideoMenu.js",
   "PreviewInSolutionExplorer": false
 }

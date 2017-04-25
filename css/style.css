@@ -1,6 +1,8 @@
 body {
 }
 
+
+
 #transparentBG {
     fill: rgba(255,255,255,0.4);
 }
@@ -57,6 +59,7 @@ body {
     padding-top: 10px;
     padding-bottom: 1px;
     width: 250px;
+    overflow: hidden;
     text-align: center;
     background-color: rgba(255,255,255,0.6);
     border-radius: 15px;
@@ -82,6 +85,11 @@ body {
 
     .element input {
         margin-bottom: 10px;
+    }
+
+    .element video {
+        height: 250px;
+        width: 100%;
     }
 
     .element:hover:after {
