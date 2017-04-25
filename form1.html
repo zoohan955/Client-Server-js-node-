@@ -3,6 +3,7 @@
     <meta charset="windows-1251" />
     <script defer src="jQuery.js"></script>
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/preloader.css" rel="stylesheet">
     <script src="d3/d3.js"></script>
     <script defer src="form1.js"></script>
     <script defer src="DrawingWindow.js"></script>
@@ -13,6 +14,9 @@
 </head>
 <body>
     <div class="game">
+        <div id="game-preloader" class="preloader">
+            <div class="loader"></div>
+        </div>
         <div class="open_close" id="open_close_main_menu" style="right: 0px;">
             <img src="icons\menu.svg" />
         </div>
@@ -124,6 +128,7 @@
             </div>
         </div>
         <svg width="900" height="400"></svg>
+        <script defer src="/js/preloader.js"></script>
     </div>
     <button class="load">LOAD JSON</button>
     <p id="result"></p>
