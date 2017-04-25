@@ -29,5 +29,6 @@ startMenu.select("#startMenu-yearButton").on("click", () => {
     tmpAge = document.querySelector("#startMenu-yearInput").value;
     user1 = new User(tmpName, tmpAge);
     RemoveMenu($('#start_menu-layers'), $('#startMenuJS'));
+    d3.select("#demoVideo_menu-layers").style("display", "flex");
 });
 
