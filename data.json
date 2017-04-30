@@ -1,22 +1,45 @@
-
 {
-"Gland":{
-        "name":"Gland",
-        "img_path":"", 
-        "Menu":"", 
-        "script":"module/library/GLand/GLand.js",
-        "categories":[],
-        "tags":[],
-        "content":""
+        "category 1":{
+                "Name":"название категории",
+                "category_image":"путь к картинке",
+                "content":
+                        {
+                        "information":"информационный текст",
+                        "control_asks":"контрольные вопросы",
+                        "interactive_tasks":"интерактивные задания"
+                        
 
-},
- "Rtree":{
-        "name":"Rtree Gen",
-        "img_path":"", 
-        "Menu":"", 
-        "script":"module/library/RTree/RTree.js",
-        "categories":[],
-        "tags":[],
-        "content":""
-   }
+                        },
+                "exponats":{
+                        "exponat1":
+                                {
+                                        "exponat_name":"название экспоната",
+                                        "exponat_image":"путь к картинке экспоната",
+                                        "menu_html":"путь к html",
+                                        "scripts":"путь к скриптам js",
+                                        "labels":"метки"
+                                },
+
+                        
+
+                        "exponat2":
+                                {
+                                        "exponat_name":"название экспоната",
+                                        "exponat_image":"путь к картинке экспоната",
+                                        "menu_html":"путь к html",
+                                        "scripts":"путь к скриптам js",
+                                        "labels":"метки"
+                                }
+
+                        
+
+                }
+                        
+
+
+                
+
+                        
+        }
 }
+
