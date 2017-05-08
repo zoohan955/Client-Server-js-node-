@@ -1,4 +1,21 @@
 /// <reference path="d3/d3.js" />
+
+//------------MODULES
+var script2 = document.createElement('script');
+script2.type='text/javascript';
+script2.src = 'module/library/RTree/RTree.js';  
+
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.src = 'module/library/GLand/GLand.js';    
+
+//-----------------------BUTOONS
+var RTreeButton = document.querySelector('#RTreeMenuButton' , '.element');
+var GLandMenuButton = document.querySelector('#GlandMenuButton','#mainMenu');
+var  button1 = document.querySelector('.load');
+//----------------------
+
+
 var textstatus = d3.select("body").append("p").text("click");
 var svg = d3.select("body").select("svg"),
     widthSvg = Number(svg.attr("width")),
@@ -52,11 +69,42 @@ d3.select("#main_menu-layers").select("#search").on("click", () => {
 })
 //************Меню MainMenu****************
 mainMenu.select("#RTreeMenuButton").on("click", () => {
-    ChangeMenu(RTreeMenu);
+
+document.getElementsByTagName('head')[0].appendChild(script2);
+if(document.getElementById('RTreeMenu')==null){
+    $.get('module/menu/RTree/RTree.html',function(data){ 
+        $('#main_menu-layers').append(data);
+    });
+}
+
+console.log("changing menu");
+ChangeMenu(RTreeMenu);
 });
+
+
+GLandMenuButton.addEventListener('click',function(){
+
+document.getElementsByTagName('head')[0].appendChild(script);
+if(document.getElementById('GLandMenu')==null){
+    $.get('module/menu/GLand/GLand.html', function(data){
+        $('#main_menu-layers').append(data);
+
+console.log("htm loaded");
+    });
+    
+}
+
+console.log("changing menu");
+ChangeMenu(GLandMenu)
+
+});
+
+
+/*
 mainMenu.select("#GLandMenuButton").on("click", () => {
     ChangeMenu(GLandMenu);
 });
+*/
 mainMenu.select("#TrashButton").on("click", () => {
     DW.clear();
 });
@@ -122,3 +170,16 @@ function steper() {
     }
 }
 */
+
+button1.addEventListener('click', (e)=>{
+//e.preventDefault();
+$.getJSON('data.json', function(data){
+   // if (user1.dificulty()===1){
+     console.log(data);
+});
+  //  console.log(data);
+
+});
+//});
+
+
