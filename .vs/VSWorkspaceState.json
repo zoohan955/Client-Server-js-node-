@@ -7,8 +7,10 @@
     "\\module\\library",
     "\\module\\library\\DemoVideoMenu",
     "\\module\\library\\RTree",
-    "\\module\\library\\StartMenu"
+    "\\module\\menu",
+    "\\module\\menu\\DemoVideoMenu",
+    "\\module\\menu\\RTree"
   ],
-  "SelectedNode": "\\form1.js",
+  "SelectedNode": "\\module\\library\\RTree\\RTree.js",
   "PreviewInSolutionExplorer": false
 }
