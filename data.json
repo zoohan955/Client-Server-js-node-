@@ -1,6 +1,7 @@
 {
+        "categories":{
         "category1":{
-                "category_name":"название категории",
+                "category_name":"категория 1",
                 "category_image":"путь к картинке",
                 "content":
                         {
@@ -35,77 +36,8 @@
                
 
                 
-         },
-
-         "category2":{
-                "category_name":"название категории",
-                "category_image":"путь к картинке",
-                "content":
-                        {
-                        "information":"информационный текст",
-                        "control_asks":"контрольные вопросы",
-                        "interactive_tasks":"интерактивные задания"
-                        
-
-                        },
-                "exponats":{
-                        "exponat1":
-                                {
-                                        "exponat_name":"название экспоната",
-                                        "exponat_image":"путь к картинке экспоната",
-                                        "menu_html":"путь к html",
-                                        "scripts":"путь к скриптам js",
-                                        "labels":"метки"
-                                },
-                        
-                        "exponat2":
-                                {
-                                        "exponat_name":"название экспоната",
-                                        "exponat_image":"путь к картинке экспоната",
-                                        "menu_html":"путь к html",
-                                        "scripts":"путь к скриптам js",
-                                        "labels":"метки"
-                                }
-
-                        
-
-                }      
-         } ,
-          "category3":{
-                "category_name":"название категории",
-                "category_image":"путь к картинке",
-                "content":
-                        {
-                        "information":"информационный текст",
-                        "control_asks":"контрольные вопросы",
-                        "interactive_tasks":"интерактивные задания"
-                        
-
-                        },
-                "exponats":{
-                        "exponat1":
-                                {
-                                        "exponat_name":"название экспоната",
-                                        "exponat_image":"путь к картинке экспоната",
-                                        "menu_html":"путь к html",
-                                        "scripts":"путь к скриптам js",
-                                        "labels":"метки"
-                                },
-                        
-                        "exponat2":
-                                {
-                                        "exponat_name":"название экспоната",
-                                        "exponat_image":"путь к картинке экспоната",
-                                        "menu_html":"путь к html",
-                                        "scripts":"путь к скриптам js",
-                                        "labels":"метки"
-                                }
-
-                        
-
-                }      
-         } 
-
+         }
+}
 }
 
 
