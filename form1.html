@@ -64,24 +64,16 @@
                     <img id="close" src="icons\close.svg" />
                 </div>
                 <div class="menu" id="demoVideoMenu" style="display:block;">
-                    <div class="element" id="demoVideoMenu-1" style="display:block;width:100%; padding:0px;">
-                        <video src="video/bloodborne1.mp4" controls></video>
+                    <div class="element">
+                        <img class="video_controls-button" id="prev_video" style="left:0;" src="icons\less.svg" />
+                        <img class="video_controls-button" id="next_video" style="right:0;" src="icons\more.svg" />
+                        <div id="video_collection">
+                            <video src="video/bloodborne1.mp4" autoplay></video>
+                            <video src="video/pain.mp4"></video>
+                            <video src="video/oldspice.mp4"></video>
+                            <video src="video/tor3.mp4"></video>
+                        </div>
                     </div>
-                    <div class="element" id="demoVideoMenu-2" style="display:none;width:100%; padding:0px;">
-                        <video src="video/pain.mp4" controls></video>
-                    </div>
-                    <div class="element" id="demoVideoMenu-3" style="display:none;width:100%; padding:0px;">
-                        <video src="video/oldspice.mp4" controls></video>
-                    </div>
-                    <div class="element" id="demoVideoMenu-4" style="display:none;width:100%; padding:0px;">
-                        <video src="video/tor3.mp4" controls></video>
-                    </div>
-                    <p style="text-align:center;">
-                        <input type="radio" name="demoVideo_menu" id="demoVideoMenu-1Radio" checked />
-                        <input type="radio" name="demoVideo_menu" id="demoVideoMenu-2Radio" />
-                        <input type="radio" name="demoVideo_menu" id="demoVideoMenu-3Radio" />
-                        <input type="radio" name="demoVideo_menu" id="demoVideoMenu-4Radio" />
-                    </p>
                 </div>
             </div>
             <div class="menu-layers" id="info_menu-layers" style="display:none;left:0px;">
