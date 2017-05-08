@@ -1,6 +1,7 @@
 {
+        "categories":{
         "category1":{
-                "category_name":"название категории",
+                "category_name":"категория 1",
                 "category_image":"путь к картинке",
                 "content":
                         {
@@ -105,7 +106,7 @@
 
                 }      
          } 
-
+}
 }
 
 
