@@ -1,13 +1,15 @@
+
+
+
 var inSearch = document.querySelector('.SearchInput');
 var NameType = document.querySelector("#startMenu-nameButton",".button");
 
 
 var button = document.querySelector('.load');
 var RTreeButton = document.querySelector('#RTreeMenuButton' , '.element');
-var GLandMenuButton = document.querySelector('#GlandMenuButton', '.element');
-var startMenu = document.querySelector(".stMenubtn");
+var GLandMenuButton = document.querySelector('#GlandMenuButton','#mainMenu');
 
-
+var  button1 = document.querySelector('.export');
 
 
 
@@ -29,8 +31,8 @@ function  User  (name,age ){
     this.name=name;
     this.dificulty=()=>{ 
         return (age<10)?1:((age<17)?2:3);
-    };
-}
+    }
+};
 
 
 user1 = new User();
@@ -69,10 +71,17 @@ fetch('module/menu/RTree/RTree.html')
 GLandMenuButton.addEventListener('click',function(){
 
 $.get('module/menu/GLand/GLand.html', function(data){
-    document.getElementsByTagName('head')[0].appendChild(script);
 $('#main_menu-layers').append(data);
+console.log("htm loaded");
+}).done(()=>{
+document.getElementsByTagName('head')[0].appendChild(script);
+console.log("htm loaded js loading");
+})
 });
-});
+
+
+
+//GLandMenuButton.addEventListener('')
 
 //----------------------------------------------/СОБЫТИЯ
 
@@ -91,7 +100,20 @@ fetch('data.json')
 
 });
 
+button1.addEventListener('click', (e)=>{
+e.preventDefault();
 
+
+
+
+$.getJSON('data.json', function(data){
+    if (user1.dificulty()===1){
+     console.log(data.categories.category1);
+}
+   // console.log(data.categories.category1);
+
+});
+});
 
 /*
 
