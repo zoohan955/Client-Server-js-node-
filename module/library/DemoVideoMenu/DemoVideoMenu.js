@@ -83,6 +83,8 @@ var button_next_video = d3.select("#demoVideoMenu").select("#next_video");
 
 d3.select("#demoVideo_menu-layers").select("#close").on("click", () => {
     RemoveMenu($('#demoVideo_menu-layers'), $('#demoVideoMenuJS'));
+    DisplayElement(d3.select("#open_close_right_menu"));
+    DisplayElement(d3.select("#open_close_info_menu"));
 });
 
 button_prev_video.on("click", () => {
@@ -125,36 +127,7 @@ button_next_video.on("mouseout", () => {
     button_next_video.style("visibility", "hidden");
 })
 
-
-
-//шлак внизу
-demoVideoMenu.select("#demoVideoMenu-1Radio").on("click", () => {
-    var newElement = d3.select("#demoVideoMenu-1");
-    currentElement_video = replaceElement(currentElement_video, newElement);
-    var newVideo = document.getElementById("video1");
-    //currentVideo = video_Stop_Playing(currentVideo, newVideo);
-});
-demoVideoMenu.select("#demoVideoMenu-2Radio").on("click", () => {
-    var newElement = d3.select("#demoVideoMenu-2");
-    currentElement_video = replaceElement(currentElement_video, newElement);
-    var newVideo = document.getElementById("video2");
-    //currentVideo = video_Stop_Playing(currentVideo, newVideo);
-});
-demoVideoMenu.select("#demoVideoMenu-3Radio").on("click", () => {
-    var newElement = d3.select("#demoVideoMenu-3");
-    currentElement_video = replaceElement(currentElement_video, newElement);
-    var newVideo = document.getElementById("video3");
-    //currentVideo = video_Stop_Playing(currentVideo, newVideo);
-});
-demoVideoMenu.select("#demoVideoMenu-4Radio").on("click", () => {
-    var newElement = d3.select("#demoVideoMenu-4");
-    currentElement_video = replaceElement(currentElement_video, newElement);
-    var newVideo = document.getElementById("video4");
-    //currentVideo = video_Stop_Playing(currentVideo, newVideo);
-});
-
 //функции
-
 function SwitchVideo(currentVideo, newVideo) {
     stop(currentVideo);
     currentVideo.hidden = true;

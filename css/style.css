@@ -117,6 +117,10 @@ input[type="radio"]:disabled {
         height: 100%;
     }
 
+img.categories {
+    border-radius: 50%;
+}
+
 .element-title {
     color: rgb(10,10,10);
     border-radius: 0 0 25px 25px;
@@ -217,5 +221,14 @@ polyline {
 
 
 
+
+<!-- ÂÀÆÍÎÅ -->
+.hide {
+    visibility: hidden;
+}
+
+.display-none {
+    display: none;
+}
 
 <!-- àíèìàöèÿ -->
