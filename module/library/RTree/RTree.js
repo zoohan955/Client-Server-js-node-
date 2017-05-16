@@ -76,8 +76,8 @@ model2 = (t) => (br1) => {
     br1.RST(1.2, -15 + 1.2 * Math.sin(t1 + 1), 0, 3)];
 }
 modelStatic1 = (br1) => {
-    return [br1.RST(0.6, 30, 0, 0.45),
-    br1.RST(0.9, -25, 0, 0.45)];
+    return [br1.RST(0.6, 30, 0, 2),
+    br1.RST(0.9, -25, 0, 2)];
 }
 modelStatic2 = (br1) => {
     return [br1.RST(0.8, 30, 0, 0.45),
@@ -105,9 +105,13 @@ RTreeMenu.select("#RTreeCreateMenuButton").on("click", () => {
     ChangeMenu(RTreeCreateMenu);
 });
 RTreeMenu.select("#RTreeTestButton").on("click", () => {
-    DW.xRange(-2, 2).yRange(0, 2);
-    DW.clear();
-    drawBranch(22)(new branch(new pt(0, 0), new pt(0, 0.5)).grow(12, modelStatic1));
+    var f = () => {
+        DW.xRange(-10, 10).yRange(0, 10);
+        DW.clear();
+        drawBranch(22)(new branch(new pt(0, 0), new pt(0, 2.3)).grow(12, modelStatic1));
+    }
+    DW.recentActions = f;
+    DW.recentActions();
 });
 //**********���� Create RTree***********
 RTreeCreateMenu.select("#RTreeTrunkButton").on("click", () => {

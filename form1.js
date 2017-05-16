@@ -38,18 +38,20 @@ var prevMenu = [currentMenu];
 
 //**************************События**********************************
 //***************Общие******************
-var dragResize = d3.drag().on('drag', function () {
+var dragResize = d3.drag().on('start', function () { DW.clear(); })
+    .on('drag', function () {
 
-    x = d3.mouse(this.parentNode)[0];
-    y = d3.mouse(this.parentNode)[1];
+        x = d3.mouse(this.parentNode)[0];
+        y = d3.mouse(this.parentNode)[1];
 
-    x = Math.max(600, x);
-    y = Math.max(400, y);
-
-    svg.attr("width", x).attr("height", y);
-    tBG.attr("width", svg.attr("width")).attr("height", svg.attr("height"));
-});
+        x = Math.max(600, x);
+        y = Math.max(400, y);
+        svg.attr("width", x).attr("height", y);
+        tBG.attr("width", svg.attr("width")).attr("height", svg.attr("height"));
+    })
+    .on('end', function () { DW.recentActions(); });
 resizer.call(dragResize);
+
 d3.select("#open_close_right_menu").on("click", () => {
     DisplayElement(d3.select("#right_menu-layers"));
     replaceImg(d3.select("#open_close_right_menu"), "icons/menu.svg", "icons/close.svg");

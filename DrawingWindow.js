@@ -54,7 +54,8 @@ DW = {
     clear: function () {
         var elements = document.getElementById("drawingWindow");
         elements.innerHTML = "";
-    }
+    },
+    recentActions: () => console.log("Функция пустая")
 }
 
 DW.plot = function (f) {

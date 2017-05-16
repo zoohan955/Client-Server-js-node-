@@ -6,11 +6,11 @@
     "\\module",
     "\\module\\library",
     "\\module\\library\\DemoVideoMenu",
-    "\\module\\library\\RTree",
-    "\\module\\menu",
-    "\\module\\menu\\DemoVideoMenu",
-    "\\module\\menu\\RTree"
+    "\\module\\library\\GLand",
+    "\\module\\library\\StartMenu",
+    "\\module\\menu\\GLand",
+    "\\module\\menu\\StartMenu"
   ],
-  "SelectedNode": "\\module\\library\\RTree\\RTree.js",
+  "SelectedNode": "\\form1.js",
   "PreviewInSolutionExplorer": false
 }
