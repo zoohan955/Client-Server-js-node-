@@ -1,43 +1,39 @@
 {
-        "categories":{
-        "category1":{
-                "category_name":"категория 1",
-                "category_image":"путь к картинке",
-                "content":
-                        {
-                        "information":"информационный текст",
-                        "control_asks":"контрольные вопросы",
-                        "interactive_tasks":"интерактивные задания"
-                        
-
-                        },
-                "exponats":{
-                        "exponat1":
-                                {
-                                        "exponat_name":"название экспоната",
-                                        "exponat_image":"путь к картинке экспоната",
-                                        "menu_html":"путь к html",
-                                        "scripts":"путь к скриптам js",
-                                        "labels":"метки"
+        "exponats":[
+                                {       
+                                        "dir":"Rtree",
+                                        "img":"splash/RTreeMenu.png",
+                                        "name":"Рекурсивное дерево",
+                                        "html":"module/menu/RTree/RTree.html",
+                                        "scripts":"module/library/RTree/RTree.js",
+                                        "labels":["RTree", "Tree", "Дерево", "Рисовать"],
+                                        "discription":"описание для 1 категории",
+                                        "difficulty":1,
+                                        "quiz":{}
                                 },
-                        
-                        "exponat2":
-                                {
-                                        "exponat_name":"название экспоната",
-                                        "exponat_image":"путь к картинке экспоната",
-                                        "menu_html":"путь к html",
-                                        "scripts":"путь к скриптам js",
-                                        "labels":"метки"
+                                {                                        
+                                        "dir":"Rtree2",
+                                        "img":"splash/RTreeMenu.png",
+                                        "name":"Рекурсивное дерево",
+                                        "html":"module/menu/RTree/RTree.html",
+                                        "scripts":"module/library/RTree/RTree.js",
+                                        "labels":["RTree", "Tree", "Дерево", "Рекурсия", "Фрактал"],
+                                        "discription":"описание для 2 категории",
+                                        "difficulty":2,
+                                        "quiz":{}
+                                },
+                                {       
+                                        "dir":"GLand",
+                                        "img":"splash/Gland.png",
+                                        "discription_full":"описание для второй категории",
+                                        "name":"Генератор ландшафтов",
+                                        "html":"module/menu/GLand/GLand.html",
+                                        "scripts":"module/library/GLand/GLand.js",
+                                        "labels":["Gland", "Generator", "Ландшафт", "Рекурсия"],
+                                        "discription_simple":"описание для 1 категории",
+                                        "difficulty":2,
+                                        "quiz":{}
                                 }
-
+                ]
                         
-
-                }
-               
-
-                
-         }
 }
-}
-
-
