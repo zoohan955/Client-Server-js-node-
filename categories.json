@@ -1,24 +1,24 @@
 {
     "categories":[
                 {
-                    "catNumber":"1",
-                    "catName":"Название категории",
-                    "catImg":"Путь к картинке",
-                    "content":"Путь к content.json?",
+                    "id":"1",
+                    "name":"Название категории",
+                    "img":"Путь к картинке",
+                    "content":"контент",
                     "exponats":"Путь к exponats.json?"
                 },
                 {
-                    "catNumber":"2",
-                    "catName":"Название категории",
-                    "catImg":"Путь к картинке",
-                    "content":"Путь к content.json?",
+                    "id":"2",
+                    "name":"Название категории",
+                    "img":"Путь к картинке",
+                    "content":"контент",
                     "exponats":"Путь к exponats.json?"
                 },
                 {
-                    "catNumber":"3",
-                    "catName":"Название категории",
-                    "catImg":"Путь к картинке",
-                    "content":"Путь к content.json?",
+                    "id":"3",
+                    "name":"Название категории",
+                    "img":"Путь к картинке",
+                    "content":"контент",
                     "exponats":"Путь к exponats.json?"
                 }
 
