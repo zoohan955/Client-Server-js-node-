@@ -1,0 +1,28 @@
+{
+    "categories":[
+                {
+                    "catNumber":"1",
+                    "catName":"Название категории",
+                    "catImg":"Путь к картинке",
+                    "content":"Путь к content.json?",
+                    "exponats":"Путь к exponats.json?"
+                },
+                {
+                    "catNumber":"2",
+                    "catName":"Название категории",
+                    "catImg":"Путь к картинке",
+                    "content":"Путь к content.json?",
+                    "exponats":"Путь к exponats.json?"
+                },
+                {
+                    "catNumber":"3",
+                    "catName":"Название категории",
+                    "catImg":"Путь к картинке",
+                    "content":"Путь к content.json?",
+                    "exponats":"Путь к exponats.json?"
+                }
+
+                 ]
+}
+
+
