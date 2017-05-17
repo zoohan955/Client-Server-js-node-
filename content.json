@@ -1,9 +1,30 @@
 {
-    "difficulty":{
-        
+    
+        "difficulty1":{
+             "content":
+                        {
+                        "information":"информационный текст",
+                        "control_asks":"контрольные вопросы",
+                        "interactive_tasks":"интерактивные задания" 
+                        }
+        },
+        "difficulty2":{
+             "content":
+                        {
+                        "information":"информационный текст",
+                        "control_asks":"контрольные вопросы",
+                        "interactive_tasks":"интерактивные задания" 
+                        }
+        },
+        "difficulty3":{
+             "content":
+                        {
+                        "information":"информационный текст",
+                        "control_asks":"контрольные вопросы",
+                        "interactive_tasks":"интерактивные задания" 
+                        }      
 
 
 
-    }
-
-}
+         }
+ }
