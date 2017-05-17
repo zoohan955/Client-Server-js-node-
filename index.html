@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+  <button onclick="piper()" id="button">Голосовать!</button>
+  <button onclick="PST()" id ="postbutton">POST</button> 
+  <button onclick="find()" id = "findjson">Find</button>
+  <input id="fsonlabels" type="text"/>
+ <button onclick="gsgen()" id="jsgen">gsgen</button>
+
+  <script>
+    function vote() {
+      button.innerHTML = ' ... ';
+
+      var xhr = new XMLHttpRequest();
+
+      xhr.open('GET', 'vote', true);
+
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState != 4) return;
+
+        if (xhr.status != 200) {
+          // обработать ошибку
+          alert('Ошибка ' + xhr.status + ': ' + xhr.statusText);
+          return;
+        }
+
+        // обработать результат
+        button.innerHTML = xhr.responseText;
+      }
+
+      xhr.send(null);
+
+    }
+
+ function piper() {
+      button.innerHTML = ' loadinG... ';
+
+      var xhr = new XMLHttpRequest();
+
+      xhr.open('GET', '1.html', true);
+
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState != 4) return;
+
+        if (xhr.status != 200) {
+          // обработать ошибку
+          alert('Ошибка ' + xhr.status + ': ' + xhr.statusText);
+          return;
+        }
+
+        // обработать результат
+        button.innerHTML = xhr.responseText;
+      }
+
+      xhr.send(null);
+
+    }
+    function PST(){
+      postbutton.innerHTML = 'loading';
+      var xhr = new XMLHttpRequest();
+
+      xhr.open('POST', '2.html', true);
+      //xhr.setRequestHeader("Content-type","text/html");
+      xhr.onreadystatechange = function() {
+        if (xhr.readyState != 4) return;
+
+        if (xhr.status != 200) {
+          // обработать ошибку
+          alert('Ошибка ' + xhr.status + ': ' + xhr.statusText);
+          return;
+        }
+
+        // обработать результат
+       //postbutton.innerHTML = xhr.responseText;
+       postbutton.innerHTML = num.value;
+
+      }
+
+      xhr.send(num.value);
+
+    }
+
+    function find(){
+      findjson.innerHTML = 'finding';
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST','/3',true);
+      
+          xhr.onreadystatechange = function() {
+        if (xhr.readyState != 4) return;
+
+        if (xhr.status != 200) {
+          // обработать ошибку
+          console.log('Ошибка '+xhr.readyState+" " + xhr.status + ': ' + xhr.statusText);
+          return;
+        }
+
+        // обработать результат
+       console.log(JSON.parse(xhr.responseText));
+       gsgen.innerHTML = fsonlabels.value;
+
+      }
+
+     xhr.send(fsonlabels.value);
+
+    }
+
+
+     function gsgen(){
+      findjson.innerHTML = 'finding';
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST','/4',true);
+      
+          xhr.onreadystatechange = function() {
+        if (xhr.readyState != 4) return;
+
+        if (xhr.status != 200) {
+          // обработать ошибку
+          console.log('Ошибка '+xhr.readyState+" " + xhr.status + ': ' + xhr.statusText);
+          return;
+        }
+
+        // обработать результат
+       console.log(JSON.parse(xhr.responseText));
+       findjson.innerHTML = fsonlabels.value;
+
+      }
+
+     xhr.send(fsonlabels.value);
+
+    }
+
+ 
+
+    
+
+    
+
+  </script>
+
+</body>
+
+</html>
