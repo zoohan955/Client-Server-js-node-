@@ -4,25 +4,23 @@
                     "id":"1",
                     "name":"Название категории",
                     "img":"Путь к картинке",
-                    "content":"контент",
                     "exponats":"Путь к exponats.json?"
                 },
                 {
                     "id":"2",
                     "name":"Название категории",
                     "img":"Путь к картинке",
-                    "content":"контент",
                     "exponats":"Путь к exponats.json?"
                 },
                 {
                     "id":"3",
                     "name":"Название категории",
                     "img":"Путь к картинке",
-                    "content":"контент",
                     "exponats":"Путь к exponats.json?"
                 }
 
                  ]
+
 }
 
 
