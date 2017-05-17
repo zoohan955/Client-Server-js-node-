@@ -6,9 +6,11 @@
     "\\module",
     "\\module\\library",
     "\\module\\library\\DemoVideoMenu",
-    "\\module\\library\\RTree",
-    "\\module\\library\\StartMenu"
+    "\\module\\library\\GLand",
+    "\\module\\library\\StartMenu",
+    "\\module\\menu\\GLand",
+    "\\module\\menu\\StartMenu"
   ],
-  "SelectedNode": "\\module\\library\\DemoVideoMenu\\DemoVideoMenu.js",
+  "SelectedNode": "\\form1.js",
   "PreviewInSolutionExplorer": false
 }

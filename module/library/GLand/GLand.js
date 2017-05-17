@@ -119,14 +119,18 @@ function iter(n, f, x) {
 GLandMenu = d3.select("#GLandMenu");
 
 GLandMenu.select("#GLandGenerationButton").on("click", () => {
-    DW.xRange(0, 2).yRange(-2, 2);
-    DW.clear();
-    amnesia(t);
-    //var tmpValue=d3.select("#Steps").valueOf();
-    var tmpValue = document.getElementById("Steps").value;
-    var t = [new triangle([0, 1, 0], [1, 1, 1], [1, 0, 0]),
-    new triangle([0, 0, -1], [1, 0, 0], [0, 1, 0])]
-    iter(tmpValue, split, t).forEach(draw);
+    var f = () => {
+        DW.xRange(0, 2).yRange(-2, 2);
+        DW.clear();
+        amnesia(t);
+        //var tmpValue=d3.select("#Steps").valueOf();
+        var tmpValue = document.getElementById("Steps").value;
+        var t = [new triangle([0, 1, 0], [1, 1, 1], [1, 0, 0]),
+        new triangle([0, 0, -1], [1, 0, 0], [0, 1, 0])]
+        iter(tmpValue, split, t).forEach(draw);
+    }
+    DW.recentActions = f;
+    DW.recentActions();
 });
 
 

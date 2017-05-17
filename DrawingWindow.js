@@ -1,8 +1,7 @@
 /// <reference path="d3/d3.js">
 
-var svg = d3.select("body").select("svg"),  //создание svg-контейнера
-    widthSvg = Number(svg.attr("width")),
-    heightSvg = Number(svg.attr("height"));
+var svg = d3.select("body").select("svg");  //создание svg-контейнера
+
 
 var drawingWindow = svg.select("#drawingWindow");
 
@@ -14,20 +13,20 @@ DW = {
     ymin: 0,
     ymax: 10,
 
-    X: scale(this.xmin, this.xmax, 0, widthSvg),
-    Y: scale(this.ymin, this.ymax, heightSvg, 0),
+    X: scale(this.xmin, this.xmax, 0, Number(svg.attr("width"))),
+    Y: scale(this.ymin, this.ymax, Number(svg.attr("height")), 0),
 
     xRange: function (x1, x2) {
         this.xmin = x1;
         this.xmax = x2;
-        this.X = scale(this.xmin, this.xmax, 0, widthSvg);
+        this.X = scale(this.xmin, this.xmax, 0, Number(svg.attr("width")));
         return this
     },
 
     yRange: function (y1, y2) {
         this.ymin = y1;
         this.ymax = y2;
-        this.Y = scale(this.ymin, this.ymax, heightSvg, 0);
+        this.Y = scale(this.ymin, this.ymax, Number(svg.attr("height")), 0);
         return this
     },
 
@@ -41,10 +40,10 @@ DW = {
     },
 
     polyline: function (pts) {
-        spoints = pts.map(pt =>[this.X(pt[0]), this.Y(pt[1])])
-                   .reduce((el, res) => el.toString() + " " + res);
+        spoints = pts.map(pt => [this.X(pt[0]), this.Y(pt[1])])
+            .reduce((el, res) => el.toString() + " " + res);
         return this.window.append("polyline")
-                   .attr("points", spoints);
+            .attr("points", spoints);
     },
 
     scale: function (n) {
@@ -55,7 +54,8 @@ DW = {
     clear: function () {
         var elements = document.getElementById("drawingWindow");
         elements.innerHTML = "";
-    }
+    },
+    recentActions: () => console.log("Empty function")
 }
 
 DW.plot = function (f) {

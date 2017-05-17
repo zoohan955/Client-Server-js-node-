@@ -7,6 +7,7 @@
     <script src="d3/d3.js"></script>
     <script defer src="form1.js"></script>
     <script defer src="DrawingWindow.js"></script>
+    <script defer src="/js/preloader.js"></script>
     <script defer src="/js/ajax.js"></script>
     <script defer src="require.js"></script>
     <script id="startMenuJS" defer src="module/library/StartMenu/StartMenu.js"></script>
@@ -17,11 +18,11 @@
         <div id="game-preloader" class="preloader">
             <div class="loader"></div>
         </div>
-        <div class="open_close" id="open_close_main_menu" style="right: 0px;">
-            <img src="icons\menu.svg" />
+        <div class="open_close display-none" id="open_close_right_menu" style="right: 0px;">
+            <img src="icons/menu.svg" />
         </div>
-        <div class="open_close" id="open_close_info_menu" style="left: 0px;">
-            <img src="icons\info.svg" />
+        <div class="open_close display-none" id="open_close_info_menu" style="left: 0px;">
+            <img src="icons/info.svg" />
         </div>
         <div class="window_resizing" style="right:0px; bottom:0px;">
             <img src="icons\replace.svg" />
@@ -32,9 +33,9 @@
                 <div class="element-std" style="padding-right:50px;direction:ltr;">
                     <img src="icons\empty.png" />
                 </div>
-                <div class="menu" id="startMenu" style="display:block;">
+                <div class="menu" id="startMenu">
                     <p class="title-text white">Welcome</p>
-                    <div class="element" id="startMenu-name" style="display:block;">
+                    <div class="element" id="startMenu-name">
                         <div class="element-title">
                             Whats is your name?
                         </div>
@@ -43,7 +44,7 @@
                             <img src="icons\right.svg" />
                         </div>
                     </div>
-                    <div class="element" id="startMenu-year" style="display:none;">
+                    <div class="element display-none" id="startMenu-year">
                         <div class="element-title">
                             how old are you?
                         </div>
@@ -58,17 +59,17 @@
                     </p>
                 </div>
             </div>
-            <div class="menu-layers" id="demoVideo_menu-layers" style="display:none;left: 50%; margin-left: -150px;">
+            <div class="menu-layers display-none" id="demoVideo_menu-layers" style="left: 50%; margin-left: -150px;">
                 <div class="blur" style="right: 0px;"></div>
                 <div class="element-std" style="padding-left:50px;direction:rtl;">
                     <img id="close" src="icons\close.svg" />
                 </div>
-                <div class="menu" id="demoVideoMenu" style="display:block;">
+                <div class="menu" id="demoVideoMenu">
                     <div class="element">
                         <img class="video_controls-button" id="prev_video" style="left:0;" src="icons\less.svg" />
                         <img class="video_controls-button" id="next_video" style="right:0;" src="icons\more.svg" />
                         <div id="video_collection">
-                            <video src="video/bloodborne1.mp4" autoplay></video>
+                            <video src="video/bloodborne1.mp4"></video>
                             <video src="video/pain.mp4"></video>
                             <video src="video/oldspice.mp4"></video>
                             <video src="video/tor3.mp4"></video>
@@ -76,7 +77,7 @@
                     </div>
                 </div>
             </div>
-            <div class="menu-layers" id="info_menu-layers" style="display:none;left:0px;">
+            <div class="menu-layers display-none" id="info_menu-layers" style="left:0px;">
                 <div class="blur" style="left: 0px;"></div>
                 <div class="element-std" style="padding-left:50px;direction:rtl;">
                     <img src="icons\right.svg" />
@@ -88,14 +89,14 @@
                     </p>
                 </div>
             </div>
-            <div class="menu-layers" id="main_menu-layers" style="display:none;right: 0px;">
+            <div class="menu-layers display-none" id="right_menu-layers" style="right: 0px;">
                 <div class="blur" style="right: 0px;"></div>
                 <div class="element-std" style="padding-right:50px;direction:ltr;">
                     <img id="back" src="icons\left.svg" />
                     <img id="search" src="icons\search.svg" />
-                    <input id="input-search" type="search" placeholder="Find something?" style="display:none; position:absolute; top:15px;" />
+                    <input class="display-none" id="input-search" type="search" placeholder="Find something?" style="position:absolute; top:15px;" />
                 </div>
-                <div class="menu" id="mainMenu" style="display:block;">
+                <div class="menu" id="mainMenu">
 
                     <div class="element" id="RTreeMenuButton" data-title="Ïåðåõîä â ìåíþ RTree.">
                         <div class="element-image">
@@ -120,7 +121,6 @@
             </div>
         </div>
         <svg width="900" height="400"></svg>
-        <script defer src="/js/preloader.js"></script>
     </div>
     <button class="load">LOAD JSON</button>
     <p id="result"></p>
