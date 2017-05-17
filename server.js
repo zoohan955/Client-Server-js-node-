@@ -7,21 +7,8 @@ var fs = require('fs');
 
 function request(req, res) {
 
-  if (req.url == '/vote') {
-    // через 1.5 секунды ответить сообщением
-    setTimeout(function () {
-      res.end('Ваш голос принят: ' + new Date());
-    }, 1500);
-  }
-  else if (req.url == '/1.html') {
-    //text1 = fs.readFileSync("1.html");
-    text1 = fs.readFile('1.html', 'UTF-8', function (error, data) {
-      if (error) { return console.log(error) }
-      else { res.end(data); }
-    });
-
-  }
-  else if (req.url == '/2') {
+ 
+   if (req.url == '/2') {
     req.on("data", (data) => {
       res.end(menuGenerator(Finder(data), data, 'searchingResults'));
     })
@@ -34,7 +21,18 @@ function request(req, res) {
       });
     });
   }
+  
+  
+   else if (req.url == '/4') {
+    req.on("data", (data) => {
+      fs.readFile('data.json', 'UTF-8', function (error, content) {
+         res.end(JSON.stringify(jsGenerator(Finder(data, JSON.parse(content)), data)));
+      });
+    });
+   }
   else file.serve(req, res);
+
+  
   console.log(`${req.method} ${req.url}`);
 }
 //----------------FUNCTIONS-------------------------
@@ -59,6 +57,17 @@ function menuGenerator(array, title, idMenu) {
 
   });
   return menu + res;
+}
+
+function jsGenerator(array){
+  var result='';
+ 
+array.forEach((item,array)=>{
+  var elem=`<script defer=" " src=`+`"`+item.scripts+`"`+`></script>`
+  result=result+elem;
+});
+return result;
+
 }
 
 // ------ этот код запускает веб-сервер -------
