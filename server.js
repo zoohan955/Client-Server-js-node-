@@ -23,21 +23,21 @@ function request(req, res) {
   }
    else if (req.url == '/4') {
     req.on("data", (data) => {
-      fs.readFile('data.json', 'UTF-8', function (error, content) {
-         res.end(JSON.stringify(jsGenerator(Finder(data, JSON.parse(content)), data)));
-        
-
+      fs.readFile('categories.json', 'UTF-8', function (error, content) {
+        // res.end(JSON.stringify(scriptGenerator(JSON.parse(content))));
+        res.end(JSON.stringify(scriptGenerator(JSON.parse(content))));
+       //res.end(JSON.stringify(scriptGenerator(Finder(data, JSON.parse(content)), data)));
       });
     });
    }
   else file.serve(req, res);
 
   
-  console.log(`${req.method} ${req.url}`);
+//  console.log(`${req.method} ${req.url}`);
 }
 //----------------FUNCTIONS-------------------------
 function Finder(value, data) {
-  return data.exponats.filter(e => e.labels.some(l => l.match(value)));
+  return data.filter(e => e.labels.some(l => l.match(value)));
 }
 function menuGenerator(array, title, idMenu) {
   var res = '';
@@ -68,7 +68,23 @@ array.forEach((item,array)=>{
   result=result+elem;
 });
 return result;
+}
 
+function scriptGenerator(array){
+  var result = '';
+
+  array.forEach((item,i,array)=>{
+   // var element = `mainMenu.select(`+item.id+`).on("click",()=>{
+   // });`;
+
+    var element = `<script>
+                  d3.select("`+item.id+`").on("click",()=>{body function
+                            });
+                  </script>`
+    //var element=item.id;
+    result = result+element;
+  });
+return result;
 }
 
 // ------ этот код запускает веб-сервер -------
