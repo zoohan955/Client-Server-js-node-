@@ -8,13 +8,13 @@ var drawingWindow = svg.select("#drawingWindow");
 DW = {
     window: drawingWindow,
 
-    xmin: -10,
-    xmax: 10,
+    xmin: 0,
+    xmax: Number(svg.attr("width")),
     ymin: 0,
-    ymax: 10,
+    ymax: Number(svg.attr("height")),
 
-    X: scale(this.xmin, this.xmax, 0, Number(svg.attr("width"))),
-    Y: scale(this.ymin, this.ymax, Number(svg.attr("height")), 0),
+    X: x => x,
+    Y: y => y,
 
     xRange: function (x1, x2) {
         this.xmin = x1;
@@ -51,6 +51,11 @@ DW = {
         return this.window.attr("transform", s);
     },
 
+    translate: function (dx, dy) {
+        var s = ("translate(" + (dx) + "," + (dy) + ")");
+        return this.window.attr("transform", s);
+    },
+
     clear: function () {
         var elements = document.getElementById("drawingWindow");
         elements.innerHTML = "";
@@ -65,6 +70,6 @@ DW.plot = function (f) {
     return this.polyline(pts).attr("class", "plotLine");
 }
 
-function scale(a, b, c, d, x) {
+function scale(a, b, c, d) {
     return x => (x - a) / (b - a) * (d - c) + c;
 }

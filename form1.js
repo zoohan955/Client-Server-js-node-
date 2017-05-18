@@ -33,6 +33,8 @@ svg.append("g").attr("id", "drawingWindow");
 var mainMenu = d3.select("#mainMenu");
 //*******************Текущее&&Предыдущее меню************************
 var currentMenu = mainMenu;
+var currentInfoMenu = d3.select("#informationMenu");
+var currentInfoStd = d3.select("#information");
 var prevMenu = [currentMenu];
 
 
@@ -53,20 +55,49 @@ var dragResize = d3.drag().on('start', function () { DW.clear(); })
 resizer.call(dragResize);
 
 d3.select("#open_close_right_menu").on("click", () => {
-    DisplayElement(d3.select("#right_menu-layers"));
+    AddRemoveClass(d3.select("#right_menu-layers"), "display-none");
     replaceImg(d3.select("#open_close_right_menu"), "icons/menu.svg", "icons/close.svg");
 });
 d3.select("#open_close_info_menu").on("click", () => {
-    DisplayElement(d3.select("#info_menu-layers"));
+    AddRemoveClass(d3.select("#info_menu-layers"), "display-none");
     replaceImg(d3.select("#open_close_info_menu"), "icons/info.svg", "icons/close.svg");
 });
 d3.select("#right_menu-layers").select("#back").on("click", () => {
     BackMenu();
 })
-//***********mainMenu-layear***************
+//***********infoMenu-layear*********************
+d3.select("#info_menu-layers").select("#information").on("click", () => {
+    AddRemoveClass(currentInfoMenu, "display-none");
+    currentInfoMenu = d3.select("#informationMenu");
+    AddRemoveClass(currentInfoMenu, "display-none");
+
+    AddRemoveClass(currentInfoStd, "backlight");
+    currentInfoStd = d3.select("#information");
+    AddRemoveClass(currentInfoStd, "backlight");
+})
+d3.select("#info_menu-layers").select("#questions").on("click", () => {
+    AddRemoveClass(currentInfoMenu, "display-none");
+    currentInfoMenu = d3.select("#questionsMenu");
+    AddRemoveClass(currentInfoMenu, "display-none");
+
+    AddRemoveClass(currentInfoStd, "backlight");
+    currentInfoStd = d3.select("#questions");
+    AddRemoveClass(currentInfoStd, "backlight");
+})
+d3.select("#info_menu-layers").select("#interactive").on("click", () => {
+    AddRemoveClass(currentInfoMenu, "display-none");
+    currentInfoMenu = d3.select("#interactiveMenu");
+    AddRemoveClass(currentInfoMenu, "display-none");
+
+    AddRemoveClass(currentInfoStd, "backlight");
+    currentInfoStd = d3.select("#interactive");
+    AddRemoveClass(currentInfoStd, "backlight");
+})
+//***********rightMenu-layear***************
 d3.select("#right_menu-layers").select("#search").on("click", () => {
-    DisplayElement(d3.select("#right_menu-layers").select("#back"));
-    DisplayElement(d3.select("#right_menu-layers").select("#input-search"));
+    AddRemoveClass(d3.select("#right_menu-layers").select("#back"), "display-none");
+    AddRemoveClass(d3.select("#right_menu-layers").select("#input-search"), "display-none");
+    AddRemoveClass(d3.select("#right_menu-layers").select("#search"), "backlight");
 })
 //************Меню MainMenu****************
 mainMenu.select("#RTreeMenuButton").on("click", () => {
@@ -127,10 +158,10 @@ BackMenu = () => {
         currentMenu = replaceElement(currentMenu, prevMenu[prevMenu.length - 1]);
     }
 };
-DisplayElement = (element) => {
-    if (element.classed("display-none") === false)
-        element.classed("display-none", true);
-    else element.classed("display-none", false);
+AddRemoveClass = (element, mclass) => {
+    if (element.classed(mclass) === false)
+        element.classed(mclass, true);
+    else element.classed(mclass, false);
 };
 RemoveMenu = (id_menu, id_js) => {
     id_menu.remove();

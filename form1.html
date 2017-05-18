@@ -79,13 +79,26 @@
             </div>
             <div class="menu-layers display-none" id="info_menu-layers" style="left:0px;">
                 <div class="blur" style="left: 0px;"></div>
-                <div class="element-std" style="padding-left:50px;direction:rtl;">
-                    <img src="icons\right.svg" />
+                <div class="element-std" style="padding-left:50px;direction:ltr;">
+                    <img class="backlight" id="information" src="icons/info.svg" />
+                    <img id="questions" src="icons/questions.svg" />
+                    <img id="interactive" src="icons/interactive.svg" />
                 </div>
-                <div class="menu">
+                <div class="menu" id="informationMenu">
                     <p class="white">
+                        InformationMenu </br></br>
                         Hi, this educational and interactive application from the home of entertaining science "Interesarium".
                         In it you will find a lot of useful and interesting information about the exhibits of our institution.
+                    </p>
+                </div>
+                <div class="menu display-none" id="questionsMenu">
+                    <p class="white">
+                        QuestionsMenu
+                    </p>
+                </div>
+                <div class="menu display-none" id="interactiveMenu">
+                    <p class="white">
+                        InteractiveMenu
                     </p>
                 </div>
             </div>

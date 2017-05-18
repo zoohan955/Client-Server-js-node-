@@ -83,8 +83,8 @@ var button_next_video = d3.select("#demoVideoMenu").select("#next_video");
 
 d3.select("#demoVideo_menu-layers").select("#close").on("click", () => {
     RemoveMenu($('#demoVideo_menu-layers'), $('#demoVideoMenuJS'));
-    DisplayElement(d3.select("#open_close_right_menu"));
-    DisplayElement(d3.select("#open_close_info_menu"));
+    AddRemoveClass(d3.select("#open_close_right_menu"), "display-none");
+    AddRemoveClass(d3.select("#open_close_info_menu"), "display-none");
 });
 
 button_prev_video.on("click", () => {
