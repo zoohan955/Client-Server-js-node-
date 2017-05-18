@@ -178,9 +178,22 @@ replaceElement = (currentElement, newElement) => {
     newElement.classed("display-none", false);
     return newElement;
 }
+
 function Search(s) {
-    //делай с ней что хочешь..:)
+    var xhr=new XMLHttpRequest();
+    xhr.open('POST','/4',true);
+    xhr.onreadystatechange=function(){
+        if(xhr.readyState!=4) return;
+        if(xhr.status!=200){
+        console.log('Ошибка '+xhr.readyState+" " + xhr.status + ': ' + xhr.statusText);
+        return;
+    }
+    console.log(JSON.parse(xhr.responseText));
+    
 }
+xhr.send(s);
+}
+
 
 
 //***********************Прочие функции******************************
