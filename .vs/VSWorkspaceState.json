@@ -2,6 +2,7 @@
   "ExpandedNodes": [
     "",
     "\\css",
+    "\\icons",
     "\\js",
     "\\module",
     "\\module\\library",
@@ -10,6 +11,6 @@
     "\\module\\library\\RTree",
     "\\module\\library\\StartMenu"
   ],
-  "SelectedNode": "\\module\\library\\GLand\\GLand.js",
+  "SelectedNode": "\\form1.js",
   "PreviewInSolutionExplorer": false
 }
