@@ -178,7 +178,7 @@ replaceElement = (currentElement, newElement) => {
     newElement.classed("display-none", false);
     return newElement;
 }
-
+//Функция связанные с сервером
 function Search(s) {
     var xhr=new XMLHttpRequest();
    
@@ -189,7 +189,7 @@ function Search(s) {
         console.log('Ошибка '+xhr.readyState+" " + xhr.status + ': ' + xhr.statusText);
         return;
     }
-  
+/*
 function addScript(src) {
   var elem = document.createElement("script");
   elem.src = JSON.parse(xhr.responseText);
@@ -197,7 +197,7 @@ function addScript(src) {
 }
 
 addScript(xhr.responseText);
-
+*/
 
 
     console.log(JSON.parse(xhr.responseText));
