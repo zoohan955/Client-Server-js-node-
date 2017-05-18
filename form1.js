@@ -5,9 +5,9 @@ var script2 = document.createElement('script');
 script2.type = 'text/javascript';
 script2.src = 'module/library/RTree/RTree.js';
 
-var script = document.createElement('script');
-script.type = 'text/javascript';
-script.src = 'module/library/GLand/GLand.js';
+//var script = document.createElement('script');
+//script.type = 'text/javascript';
+//script.src = 'module/library/GLand/GLand.js';
 
 //-----------------------BUTOONS
 var RTreeButton = document.querySelector('#RTreeMenuButton', '.element');
@@ -181,6 +181,7 @@ replaceElement = (currentElement, newElement) => {
 
 function Search(s) {
     var xhr=new XMLHttpRequest();
+   
     xhr.open('POST','/4',true);
     xhr.onreadystatechange=function(){
         if(xhr.readyState!=4) return;
@@ -188,8 +189,18 @@ function Search(s) {
         console.log('Ошибка '+xhr.readyState+" " + xhr.status + ': ' + xhr.statusText);
         return;
     }
+  
+function addScript(src) {
+  var elem = document.createElement("script");
+  elem.src = JSON.parse(xhr.responseText);
+  document.head.appendChild(elem);
+}
+
+addScript(xhr.responseText);
+
+
+
     console.log(JSON.parse(xhr.responseText));
-    
 }
 xhr.send(s);
 }
