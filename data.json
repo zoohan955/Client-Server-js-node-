@@ -1,34 +1,21 @@
 {
         "exponats":[
                                 {       
-                                        "id":"Rtree",
+                                        "id":"RTree",
                                         "img":"splash/RTreeMenu.png",
                                         "name":"Рекурсивное дерево",
                                         "html":"module/menu/RTree/RTree.html",
                                         "scripts":"module/library/RTree/RTree.js",
-                                        "labels":["RTree", "Tree", "Дерево", "Рисовать"],
-                                        "difficulty":1,
-                                        "quiz":{}
+                                        "labels":["RTree", "Tree", "Дерево", "Рисовать"]
                                 },
-                                {                                        
-                                        "id":"Rtree2",
-                                        "img":"splash/RTreeMenu.png",
-                                        "name":"Рекурсивное дерево",
-                                        "html":"module/menu/RTree/RTree.html",
-                                        "scripts":"module/library/RTree/RTree.js",
-                                        "labels":["RTree", "Tree", "Дерево", "Рекурсия", "Фрактал"],
-                                        "difficulty":2,
-                                        "quiz":{}
-                                },
+                               
                                 {       
                                         "id":"GLand",
                                         "img":"splash/Gland.png",
                                         "name":"Генератор ландшафтов",
                                         "html":"module/menu/GLand/GLand.html",
                                         "scripts":"module/library/GLand/GLand.js",
-                                        "labels":["Gland", "Generator", "Ландшафт", "Рекурсия"],
-                                        "difficulty":2,
-                                        "quiz":{}
+                                        "labels":["Gland", "Generator", "Ландшафт", "Рекурсия"]      
                                 }
                 ]
                         
