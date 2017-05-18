@@ -1,36 +1,32 @@
 {
         "exponats":[
                                 {       
-                                        "dir":"Rtree",
+                                        "id":"Rtree",
                                         "img":"splash/RTreeMenu.png",
                                         "name":"Рекурсивное дерево",
                                         "html":"module/menu/RTree/RTree.html",
                                         "scripts":"module/library/RTree/RTree.js",
                                         "labels":["RTree", "Tree", "Дерево", "Рисовать"],
-                                        "discription":"описание для 1 категории",
                                         "difficulty":1,
                                         "quiz":{}
                                 },
                                 {                                        
-                                        "dir":"Rtree2",
+                                        "id":"Rtree2",
                                         "img":"splash/RTreeMenu.png",
                                         "name":"Рекурсивное дерево",
                                         "html":"module/menu/RTree/RTree.html",
                                         "scripts":"module/library/RTree/RTree.js",
                                         "labels":["RTree", "Tree", "Дерево", "Рекурсия", "Фрактал"],
-                                        "discription":"описание для 2 категории",
                                         "difficulty":2,
                                         "quiz":{}
                                 },
                                 {       
-                                        "dir":"GLand",
+                                        "id":"GLand",
                                         "img":"splash/Gland.png",
-                                        "discription_full":"описание для второй категории",
                                         "name":"Генератор ландшафтов",
                                         "html":"module/menu/GLand/GLand.html",
                                         "scripts":"module/library/GLand/GLand.js",
                                         "labels":["Gland", "Generator", "Ландшафт", "Рекурсия"],
-                                        "discription_simple":"описание для 1 категории",
                                         "difficulty":2,
                                         "quiz":{}
                                 }
