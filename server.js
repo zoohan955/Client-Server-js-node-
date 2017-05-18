@@ -25,6 +25,8 @@ function request(req, res) {
     req.on("data", (data) => {
       fs.readFile('data.json', 'UTF-8', function (error, content) {
          res.end(JSON.stringify(jsGenerator(Finder(data, JSON.parse(content)), data)));
+        
+
       });
     });
    }
@@ -61,7 +63,8 @@ function jsGenerator(array){
   var result='';
  
 array.forEach((item,array)=>{
-  var elem=`<script defer=" " src=`+`"`+item.scripts+`"`+`></script>`
+  //var elem=`<script defer=" " src=`+`"`+item.scripts+`"`+`></script>`
+  var elem=item.scripts
   result=result+elem;
 });
 return result;
