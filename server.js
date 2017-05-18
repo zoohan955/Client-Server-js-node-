@@ -6,7 +6,7 @@ var file = new static.Server('.');
 var fs = require('fs');
 
 function request(req, res) {
-
+//------------------REQUESTS------------------------------
  
    if (req.url == '/2') {
     req.on("data", (data) => {
@@ -21,8 +21,6 @@ function request(req, res) {
       });
     });
   }
-  
-  
    else if (req.url == '/4') {
     req.on("data", (data) => {
       fs.readFile('data.json', 'UTF-8', function (error, content) {
