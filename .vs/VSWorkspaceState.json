@@ -1,9 +1,6 @@
 {
   "ExpandedNodes": [
     "",
-    "\\css",
-    "\\icons",
-    "\\js",
     "\\module",
     "\\module\\library",
     "\\module\\library\\DemoVideoMenu",
@@ -11,6 +8,6 @@
     "\\module\\library\\RTree",
     "\\module\\library\\StartMenu"
   ],
-  "SelectedNode": "\\form1.js",
+  "SelectedNode": "\\server.js",
   "PreviewInSolutionExplorer": false
 }
