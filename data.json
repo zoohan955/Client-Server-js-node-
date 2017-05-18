@@ -6,7 +6,7 @@
                                         "name":"Рекурсивное дерево",
                                         "html":"module/menu/RTree/RTree.html",
                                         "scripts":"module/library/RTree/RTree.js",
-                                        "labels":["RTree", "Tree", "Дерево", "Рисовать"]
+                                        "labels":["RTree", "Tree", "Дерево", "Рисовать","Рекурсия"]
                                 },
                                
                                 {       
