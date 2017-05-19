@@ -179,6 +179,17 @@ replaceElement = (currentElement, newElement) => {
     return newElement;
 }
 
+var post = (url, req, func) => {
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", url, true); //создание запроса
+    xhr.onreadystatechange = function () {
+        if (xhr.status === 200 && xhr.readyState === 4) {
+            func(xhr.responseText);
+        }
+    }
+    xhr.send(req);//отправка запроса
+}
+
 function Search(s) {
     var xhr=new XMLHttpRequest();
    
@@ -204,6 +215,8 @@ addScript(xhr.responseText);
 }
 xhr.send(s);
 }
+
+
 
 
 
