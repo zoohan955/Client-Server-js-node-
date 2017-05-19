@@ -1,5 +1,5 @@
-{
-        "exponats":[
+
+                  [
                                 {       
                                         "id":"RTree",
                                         "img":"splash/RTreeMenu.png",
@@ -17,6 +17,5 @@
                                         "scripts":"module/library/GLand/GLand.js",
                                         "labels":["Gland", "Generator", "Ландшафт", "Рекурсия"]      
                                 }
-                ]
+                   ]
                         
-}
