@@ -191,29 +191,25 @@ var post = (url, req, func) => {
 }
 
 function Search(s) {
-    var xhr=new XMLHttpRequest();
-   
-    xhr.open('POST','/4',true);
-    xhr.onreadystatechange=function(){
-        if(xhr.readyState!=4) return;
-        if(xhr.status!=200){
-        console.log('Ошибка '+xhr.readyState+" " + xhr.status + ': ' + xhr.statusText);
-        return;
+    var xhr = new XMLHttpRequest();
+
+    xhr.open('POST', '/4', true);
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState != 4) return;
+        if (xhr.status != 200) {
+            console.log('Ошибка ' + xhr.readyState + " " + xhr.status + ': ' + xhr.statusText);
+            return;
+        }
+
+        function addScript(src) {
+            var elem = document.createElement("script");
+            elem.src = JSON.parse(xhr.responseText);
+            document.head.appendChild(elem);
+        }
+        addScript(xhr.responseText);
+        console.log(JSON.parse(xhr.responseText));
     }
-  
-function addScript(src) {
-  var elem = document.createElement("script");
-  elem.src = JSON.parse(xhr.responseText);
-  document.head.appendChild(elem);
-}
-
-addScript(xhr.responseText);
-
-
-
-    console.log(JSON.parse(xhr.responseText));
-}
-xhr.send(s);
+    xhr.send(s);
 }
 
 
