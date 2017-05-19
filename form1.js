@@ -2,17 +2,17 @@
 
 //------------MODULES
 var script2 = document.createElement('script');
-script2.type='text/javascript';
-script2.src = 'module/library/RTree/RTree.js';  
+script2.type = 'text/javascript';
+script2.src = 'module/library/RTree/RTree.js';
 
 var script = document.createElement('script');
 script.type = 'text/javascript';
-script.src = 'module/library/GLand/GLand.js';    
+script.src = 'module/library/GLand/GLand.js';
 
 //-----------------------BUTOONS
-var RTreeButton = document.querySelector('#RTreeMenuButton' , '.element');
-var GLandMenuButton = document.querySelector('#GlandMenuButton','#mainMenu');
-var  button1 = document.querySelector('.load');
+var RTreeButton = document.querySelector('#RTreeMenuButton', '.element');
+var GLandMenuButton = document.querySelector('#GlandMenuButton', '#mainMenu');
+var button1 = document.querySelector('.load');
 //----------------------
 
 
@@ -102,32 +102,32 @@ d3.select("#right_menu-layers").select("#search").on("click", () => {
 //************Меню MainMenu****************
 mainMenu.select("#RTreeMenuButton").on("click", () => {
 
-document.getElementsByTagName('head')[0].appendChild(script2);
-if(document.getElementById('RTreeMenu')==null){
-    $.get('module/menu/RTree/RTree.html',function(data){ 
-        $('#right_menu-layers').append(data);
-    });
-}
+    document.getElementsByTagName('head')[0].appendChild(script2);
+    if (document.getElementById('RTreeMenu') == null) {
+        $.get('module/menu/RTree/RTree.html', function (data) {
+            $('#right_menu-layers').append(data);
+        });
+    }
 
-console.log("changing menu");
-ChangeMenu(RTreeMenu);
+    console.log("changing menu");
+    ChangeMenu(RTreeMenu);
 });
 
 
-GLandMenuButton.addEventListener('click',function(){
+GLandMenuButton.addEventListener('click', function () {
 
-document.getElementsByTagName('head')[0].appendChild(script);
-if(document.getElementById('GLandMenu')==null){
-    $.get('module/menu/GLand/GLand.html', function(data){
-        $('#right_menu-layers').append(data);
+    document.getElementsByTagName('head')[0].appendChild(script);
+    if (document.getElementById('GLandMenu') == null) {
+        $.get('module/menu/GLand/GLand.html', function (data) {
+            $('#right_menu-layers').append(data);
 
-console.log("htm loaded");
-    });
-    
-}
+            console.log("htm loaded");
+        });
 
-console.log("changing menu");
-ChangeMenu(GLandMenu)
+    }
+
+    console.log("changing menu");
+    ChangeMenu(GLandMenu)
 
 });
 
@@ -178,6 +178,10 @@ replaceElement = (currentElement, newElement) => {
     newElement.classed("display-none", false);
     return newElement;
 }
+function Search(s) {
+    //делай с ней что хочешь..:)
+}
+
 
 //***********************Прочие функции******************************
 
@@ -192,13 +196,13 @@ function steper() {
 }
 */
 
-button1.addEventListener('click', (e)=>{
-//e.preventDefault();
-$.getJSON('data.json', function(data){
-   // if (user1.dificulty()===1){
-     console.log(data);
-});
-  //  console.log(data);
+button1.addEventListener('click', (e) => {
+    //e.preventDefault();
+    $.getJSON('data.json', function (data) {
+        // if (user1.dificulty()===1){
+        console.log(data);
+    });
+    //  console.log(data);
 
 });
 //});
