@@ -4,6 +4,19 @@ var querystring = require('querystring');
 var static = require('node-static');
 var file = new static.Server('.');
 var fs = require('fs');
+//---------------------------------
+function  User  (name,age ){
+    this.name=name;
+    this.dificulty=()=>{ 
+        return (age<10)?1:((age<17)?2:3);
+    }
+};
+
+
+//user1 = new User();
+//-----------------------------------
+
+
 
 function request(req, res) {
 //------------------REQUESTS------------------------------
@@ -14,7 +27,7 @@ function request(req, res) {
     })
     console.log('событие для поста');
   }
-  else if (req.url == '/3') {
+  else if (req.url == '/search') {
     req.on("data", (data) => {
       fs.readFile('data.json', 'UTF-8', function (error, content) {
         res.end(JSON.stringify(menuGenerator(Finder(data, JSON.parse(content)), data, 'searchingResults')));
@@ -24,11 +37,12 @@ function request(req, res) {
    else if (req.url == '/4') {
     req.on("data", (data) => {
       fs.readFile('categories.json', 'UTF-8', function (error, content) {
-        // res.end(JSON.stringify(scriptGenerator(JSON.parse(content))));
         res.end(JSON.stringify(scriptGenerator(JSON.parse(content))));
-       //res.end(JSON.stringify(scriptGenerator(Finder(data, JSON.parse(content)), data)));
       });
     });
+   }
+   else if(req.url=='/newUser'){
+     user1 = new User();
    }
   else file.serve(req, res);
 
@@ -63,7 +77,6 @@ function jsGenerator(array){
   var result='';
  
 array.forEach((item,array)=>{
-  //var elem=`<script defer=" " src=`+`"`+item.scripts+`"`+`></script>`
   var elem=item.scripts
   result=result+elem;
 });
@@ -74,18 +87,17 @@ function scriptGenerator(array){
   var result = '';
 
   array.forEach((item,i,array)=>{
-   // var element = `mainMenu.select(`+item.id+`).on("click",()=>{
-   // });`;
-
     var element = `<script>
-                  d3.select("`+item.id+`").on("click",()=>{body function
+                  d3.select("#`+item.id+`").on("click",()=>{body function
                             });
                   </script>`
-    //var element=item.id;
+
+    
     result = result+element;
   });
 return result;
 }
+
 
 // ------ этот код запускает веб-сервер -------
 
