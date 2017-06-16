@@ -47,7 +47,7 @@ function request(req, res) {
   else file.serve(req, res);
 
   
-//  console.log(`${req.method} ${req.url}`);
+
 }
 //----------------FUNCTIONS-------------------------
 function Finder(value, data) {
