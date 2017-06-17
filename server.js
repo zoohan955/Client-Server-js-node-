@@ -3,7 +3,16 @@ var url = require('url');
 var querystring = require('querystring');
 var static = require('node-static');
 var file = new static.Server('.');
+var debug = require('debug')('server');
 var fs = require('fs');
+var now = new Date();
+
+
+
+//для логирования прописать в консоли
+//1. set DEBUG=server
+//2. node server.js - стартует сервер
+//если нет модуля: nmp install debug
 //---------------------------------
 function  User  (name,age ){
     this.name=name;
@@ -20,7 +29,7 @@ function  User  (name,age ){
 
 function request(req, res) {
 //------------------REQUESTS------------------------------
- 
+ //debug('Server Running');
    if (req.url == '/2') {
     req.on("data", (data) => {
       res.end(menuGenerator(Finder(data), data, 'searchingResults'));
@@ -41,18 +50,31 @@ function request(req, res) {
       });
     });
    }
-   else if(req.url=='/newUser'){
-     user1 = new User();
+   else if(req.url=='/44'){
+     req.on("data",(data)=>{
+       fs.readFile('exponats.json','UTF-8',function(error,content){
+         res.end(JSON.stringify(nameFinder(data, JSON.parse(content))));
+        // debug(req);
+
+       })
+     })
    }
+   //else if(req.url=='/newUser'){
+    // user1 = new User();
+   //}
   else file.serve(req, res);
-
-  
-
+  debug('URL:',req.url,'|METHOD:',req.method,'|TIME:',now, '|RESPONSE_STATUS_CODE:',res.statusCode);
 }
+
 //----------------FUNCTIONS-------------------------
-function Finder(value, data) {
-  return data.filter(e => e.labels.some(l => l.match(value)));
+function labelsFinder(value, data) {
+    return data.filter(e => e.labels.some(l => l.match(value)));
+ }
+ 
+function nameFinder(value,data){
+  return data.filter(x=>x.name.match(value));
 }
+
 function menuGenerator(array, title, idMenu) {
   var res = '';
   var menu = `<div class="menu display-none" id="` + idMenu + `">
@@ -103,6 +125,8 @@ return result;
 
 if (!module.parent) {
   http.createServer(request).listen(9000);
+  debug('STARTS');
+  
 } else {
   exports.request = request;
 }
